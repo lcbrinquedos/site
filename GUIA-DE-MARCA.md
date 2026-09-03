@@ -13,20 +13,20 @@
 
 Para textos longos, use azul-marinho `#10233E` sobre branco. Evite amarelo em textos pequenos, pois ele tem pouco contraste em fundo claro.
 
-## Tipografia recomendada
+## Tipografia adotada no site
 
 O arquivo recebido não preserva o nome da fonte original: tanto o PNG quanto o SVG contêm a marca como imagem, sem texto editável. Por isso, não é possível afirmar tecnicamente qual foi a fonte exata usada na criação.
 
-- Títulos e chamadas: **Fredoka Bold ou SemiBold**
-- Alternativa mais divertida para artes: **Baloo 2 ExtraBold**
-- Textos e informações: **Nunito Regular, SemiBold ou Bold**
+- Títulos e chamadas: **Montserrat SemiBold (600)**
+- Subtítulos e botões: **Montserrat Medium ou SemiBold (500–600)**
+- Textos e informações: **Montserrat Regular (400)**
 
-Fredoka e Nunito foram aplicadas no site. As duas estão disponíveis gratuitamente no Google Fonts e no Canva.
+Montserrat foi aplicada em todo o site para criar uma presença mais institucional, elegante e minimalista. Ela está disponível gratuitamente no Google Fonts e no Canva.
 
 ## Combinações para artes
 
-- Título de post: Fredoka Bold
-- Preço ou promoção: Fredoka Bold ou Baloo 2 ExtraBold
-- Subtítulo: Nunito Bold
-- Texto explicativo: Nunito Regular ou SemiBold
-- Botões e chamadas: Nunito ExtraBold
+- Título de post: Montserrat SemiBold
+- Preço ou promoção: Montserrat Bold
+- Subtítulo: Montserrat Medium
+- Texto explicativo: Montserrat Regular
+- Botões e chamadas: Montserrat SemiBold
