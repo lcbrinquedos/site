@@ -78,32 +78,14 @@
     section{padding:96px 0}
     .section-head{display:flex;align-items:end;justify-content:space-between;gap:28px;margin-bottom:40px}
     .section-head .lead{margin:0;max-width:470px}
-    .filters{display:flex;gap:9px;overflow:auto;padding-bottom:8px;margin-bottom:26px;scrollbar-width:thin}
-    .filter{white-space:nowrap;border:1px solid var(--line);background:white;border-radius:999px;padding:10px 17px;color:var(--muted);font-weight:750}
-    .filter.active,.filter:hover{background:var(--ink);color:white;border-color:var(--ink)}
-    .category-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-    .category-card{position:relative;min-height:286px;border-radius:var(--radius);padding:26px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;transition:.3s ease;border:1px solid rgba(0,0,0,.04)}
-    .category-card:hover{transform:translateY(-7px);box-shadow:var(--shadow)}
-    .category-card[hidden]{display:none}
-    .category-card::after{content:"";position:absolute;width:170px;height:170px;border:32px solid rgba(255,255,255,.35);border-radius:50%;right:-58px;bottom:-55px}
-    .c-blue{background:#dcecff}.c-pink{background:#ffe1e8}.c-yellow{background:#fff1ad}.c-green{background:#d9f9e9}
-    .cat-icon{width:62px;height:62px;border-radius:19px;background:rgba(255,255,255,.76);display:grid;place-items:center;font-size:2rem;backdrop-filter:blur(5px)}
-    .category-card h3{font-size:1.18rem;margin-bottom:8px}.category-card p{font-size:.9rem;color:#405069;max-width:230px}
     .card-link{display:flex;align-items:center;gap:8px;margin-top:18px;font-weight:600;font-size:.88rem;position:relative;z-index:1}
-    .experience{padding-top:18px}
-    .experience-grid{display:grid;grid-template-columns:1.15fr .85fr .85fr;gap:18px}
-    .experience-card{position:relative;min-height:390px;border-radius:24px;overflow:hidden;background:var(--paper)}
-    .experience-card img{width:100%;height:100%;object-fit:cover;transition:transform .55s ease}
-    .experience-card:hover img{transform:scale(1.035)}
-    .experience-card figcaption{position:absolute;left:18px;right:18px;bottom:18px;padding:16px 18px;border-radius:16px;background:rgba(255,255,255,.91);backdrop-filter:blur(10px);box-shadow:0 10px 30px rgba(16,35,62,.12)}
-    .experience-card b{display:block;font-weight:600}.experience-card span{display:block;color:var(--muted);font-size:.84rem;margin-top:3px}
-    .showcase{padding-top:40px;background:linear-gradient(180deg,#fff 0%,var(--paper) 100%)}
+    .showcase{background:linear-gradient(180deg,#fff 0%,var(--paper) 100%)}
     .showcase-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:30px}
     .showcase-actions{display:flex;gap:9px}.showcase-arrow{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:white;color:var(--blue);display:grid;place-items:center;font-size:1.25rem;box-shadow:0 8px 24px rgba(16,35,62,.08);transition:.2s}.showcase-arrow:hover{background:var(--blue);color:white;transform:translateY(-2px)}
-    .showcase-track{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(260px,34%);gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:thin;scrollbar-color:#b7c9e3 transparent;padding:4px 2px 18px}
-    .showcase-card{scroll-snap-align:start;background:white;border:1px solid var(--line);border-radius:24px;overflow:hidden;box-shadow:0 12px 34px rgba(16,35,62,.07)}
-    .showcase-card img{width:100%;height:315px;object-fit:cover;transition:transform .5s ease}.showcase-card:hover img{transform:scale(1.025)}
-    .showcase-card figcaption{padding:18px 20px 20px}.showcase-card b{display:block;font-weight:600}.showcase-card span{display:block;color:var(--muted);font-size:.84rem;margin-top:4px}
+    .showcase-track{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(220px,24%);gap:15px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:thin;scrollbar-color:#b7c9e3 transparent;padding:4px 2px 18px}
+    .showcase-card{scroll-snap-align:start;background:white;border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:0 10px 28px rgba(16,35,62,.065);display:flex;flex-direction:column}
+    .showcase-card img{width:100%;height:220px;object-fit:cover;transition:transform .5s ease}.showcase-card:hover img{transform:scale(1.025)}
+    .showcase-card figcaption{padding:15px 16px 17px;display:flex;flex:1;flex-direction:column}.showcase-card b{display:block;font-size:.92rem;font-weight:600}.showcase-card span{display:block;color:var(--muted);font-size:.78rem;line-height:1.5;margin-top:4px}.showcase-card .card-link{color:var(--blue);font-size:.78rem;margin-top:auto;padding-top:12px}
     .solutions{background:var(--paper)}
     .solution-grid{display:grid;grid-template-columns:1.06fr .94fr;gap:20px}
     .solution-feature{min-height:520px;background:linear-gradient(145deg,var(--blue-2),var(--blue),var(--cyan));color:white;border-radius:32px;padding:48px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden}
@@ -143,11 +125,11 @@
     @media(max-width:980px){
       .nav-wrap>.btn{display:none}.menu-btn{display:grid;place-items:center}nav{position:absolute;top:calc(100% + 8px);left:20px;right:20px;background:white;border:1px solid var(--line);box-shadow:var(--shadow);border-radius:20px;padding:22px;display:none;flex-direction:column;align-items:stretch}nav.open{display:flex}nav .btn{display:flex}
       .hero-grid,.solution-grid,.about-box,.faq-wrap{grid-template-columns:1fr}.hero-visual{min-height:480px}.hero-image{height:460px}.float-one{left:15px}.float-two{right:15px}
-      .trust-grid,.category-grid,.process-grid{grid-template-columns:repeat(2,1fr)}.experience-grid{grid-template-columns:1fr 1fr}.experience-card:first-child{grid-column:1/-1}.showcase-track{grid-auto-columns:minmax(280px,52%)}.trust-item:nth-child(3){border-left:0;padding-left:0}.solution-feature{min-height:430px}.footer-grid{grid-template-columns:1fr 1fr}.footer-brand{grid-column:1/-1}
+      .trust-grid,.process-grid{grid-template-columns:repeat(2,1fr)}.showcase-track{grid-auto-columns:minmax(220px,38%)}.showcase-card img{height:210px}.trust-item:nth-child(3){border-left:0;padding-left:0}.solution-feature{min-height:430px}.footer-grid{grid-template-columns:1fr 1fr}.footer-brand{grid-column:1/-1}
     }
     @media(max-width:640px){
       .container{width:min(calc(100% - 28px),var(--max))}.announcement .container{justify-content:center}.announcement span{display:none}.brand img{height:62px}.hero{padding-top:36px}.hero-grid{gap:34px}.hero h1{font-size:2.05rem}.hero h1 span{white-space:normal}.hero-actions .btn{width:100%}.hero-visual{min-height:365px}.hero-image{height:350px;border-radius:26px 26px 70px 26px}.float-two{display:none}.float-one{left:12px;bottom:-18px}
-      .trust{margin-top:10px}.trust-grid,.category-grid,.solution-list,.process-grid,.about-stats,.experience-grid{grid-template-columns:1fr}.experience-card:first-child{grid-column:auto}.experience-card{min-height:310px}.showcase-heading{align-items:flex-start}.showcase-track{grid-auto-columns:84%}.showcase-card img{height:280px}.trust-item+.trust-item{border-left:0;padding-left:0;border-top:1px solid var(--line);padding-top:16px}.section-head{align-items:start;flex-direction:column}section{padding:72px 0}.category-card{min-height:240px}.solution-feature,.about-box,.cta-box{padding:34px 25px}.solution-feature{min-height:440px}.process-card:not(:last-child)::after{display:none}.process-grid{gap:12px}.process-card{padding:10px 0 10px 62px}.process-card::before{top:4px}.cta-box{align-items:flex-start;flex-direction:column}.cta-box .btn{width:100%}.footer-grid{grid-template-columns:1fr;gap:34px}.footer-brand{grid-column:auto}.copyright{flex-direction:column;gap:8px}
+      .trust{margin-top:10px}.trust-grid,.solution-list,.process-grid,.about-stats{grid-template-columns:1fr}.showcase-heading{align-items:flex-start}.showcase-track{grid-auto-columns:70%}.showcase-card img{height:200px}.trust-item+.trust-item{border-left:0;padding-left:0;border-top:1px solid var(--line);padding-top:16px}.section-head{align-items:start;flex-direction:column}section{padding:72px 0}.solution-feature,.about-box,.cta-box{padding:34px 25px}.solution-feature{min-height:440px}.process-card:not(:last-child)::after{display:none}.process-grid{gap:12px}.process-card{padding:10px 0 10px 62px}.process-card::before{top:4px}.cta-box{align-items:flex-start;flex-direction:column}.cta-box .btn{width:100%}.footer-grid{grid-template-columns:1fr;gap:34px}.footer-brand{grid-column:auto}.copyright{flex-direction:column;gap:8px}
     }
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
   </style>
@@ -190,47 +172,26 @@
       <div class="trust-item"><span class="trust-icon">🚚</span><div><b>Atendimento nacional</b><p>Consulte entrega e montagem</p></div></div>
       <div class="trust-item"><span class="trust-icon">💬</span><div><b>Orçamento ágil</b><p>Direto pelo WhatsApp</p></div></div>
     </div></div>
-    <section id="produtos">
-      <div class="container">
-        <div class="section-head reveal"><div><span class="eyebrow">Nossas categorias</span><h2>Encontre a solução ideal</h2></div><p class="lead">Escolha uma categoria para conhecer possibilidades adequadas ao seu público, espaço e projeto.</p></div>
-        <div class="filters" aria-label="Filtrar categorias">
-          <button class="filter active" data-filter="todos">Todos</button><button class="filter" data-filter="educativos">Educativos</button><button class="filter" data-filter="playgrounds">Playgrounds</button><button class="filter" data-filter="ambientes">Ambientes</button>
-        </div>
-        <div class="category-grid">
-          <article class="category-card c-blue reveal" data-category="educativos"><div class="cat-icon">🧠</div><div><h3>Brinquedos educativos</h3><p>Materiais que estimulam raciocínio, linguagem e autonomia.</p><a class="card-link" href="#contato" data-interest="Brinquedos educativos">Solicitar opções →</a></div></article>
-          <article class="category-card c-pink reveal" data-category="playgrounds"><div class="cat-icon">🛝</div><div><h3>Playgrounds</h3><p>Soluções para brincar, explorar e transformar espaços.</p><a class="card-link" href="#contato" data-interest="Playgrounds">Solicitar opções →</a></div></article>
-          <article class="category-card c-yellow reveal" data-category="educativos"><div class="cat-icon">🧩</div><div><h3>Jogos pedagógicos</h3><p>Recursos para alfabetização, matemática e coordenação.</p><a class="card-link" href="#contato" data-interest="Jogos pedagógicos">Solicitar opções →</a></div></article>
-          <article class="category-card c-green reveal" data-category="ambientes"><div class="cat-icon">🏫</div><div><h3>Espaços infantis</h3><p>Painéis, pisos, mesas e itens para ambientes acolhedores.</p><a class="card-link" href="#contato" data-interest="Espaços infantis">Solicitar opções →</a></div></article>
-        </div>
-      </div>
-    </section>
-    <section class="experience" aria-labelledby="experiencias-title">
-      <div class="container">
-        <div class="section-head reveal"><div><span class="eyebrow">Experiências que transformam</span><h2 id="experiencias-title">Aprender, conviver e explorar.</h2></div><p class="lead">Soluções pensadas para criar ambientes mais estimulantes, acolhedores e funcionais.</p></div>
-        <div class="experience-grid">
-          <figure class="experience-card reveal"><img src="assets/experiencia-educativa.webp" width="1200" height="900" loading="lazy" alt="Crianças utilizando brinquedos educativos em uma sala de aprendizagem"><figcaption><b>Aprendizagem ativa</b><span>Recursos que despertam curiosidade e novas habilidades.</span></figcaption></figure>
-          <figure class="experience-card reveal"><img src="assets/experiencia-playground.webp" width="1200" height="900" loading="lazy" alt="Crianças brincando juntas em um playground"><figcaption><b>Movimento e convivência</b><span>Espaços para brincar, interagir e criar memórias.</span></figcaption></figure>
-          <figure class="experience-card reveal"><img src="assets/experiencia-pedagogica.webp" width="1200" height="900" loading="lazy" alt="Seleção de brinquedos pedagógicos coloridos"><figcaption><b>Escolhas com propósito</b><span>Materiais para diferentes fases e objetivos.</span></figcaption></figure>
-        </div>
-      </div>
-    </section>
-    <section class="showcase" aria-labelledby="showcase-title">
+    <section class="showcase" id="produtos" aria-labelledby="showcase-title">
       <div class="container">
         <div class="showcase-heading reveal">
-          <div><span class="eyebrow">Produtos e projetos</span><h2 id="showcase-title">Soluções em movimento.</h2><p class="lead">Deslize para conhecer algumas possibilidades do nosso portfólio e da nossa operação.</p></div>
-          <div class="showcase-actions" aria-label="Navegar pelas fotos"><button class="showcase-arrow" type="button" data-showcase-direction="-1" aria-label="Fotos anteriores">←</button><button class="showcase-arrow" type="button" data-showcase-direction="1" aria-label="Próximas fotos">→</button></div>
+          <div><span class="eyebrow">Nossas categorias</span><h2 id="showcase-title">Soluções para cada necessidade.</h2><p class="lead">Brinquedos, mobiliário e projetos para famílias, escolas, empresas e instituições.</p></div>
+          <div class="showcase-actions" aria-label="Navegar pelas categorias"><button class="showcase-arrow" type="button" data-showcase-direction="-1" aria-label="Categorias anteriores">←</button><button class="showcase-arrow" type="button" data-showcase-direction="1" aria-label="Próximas categorias">→</button></div>
         </div>
-        <div class="showcase-track reveal" id="showcaseTrack" tabindex="0" aria-label="Galeria de produtos e projetos">
-          <figure class="showcase-card"><img src="assets/brincar-aviao-madeira.webp" width="1400" height="1400" loading="lazy" alt="Criança brincando com avião de madeira colorido"><figcaption><b>Brincar e imaginar</b><span>Produtos que transformam momentos em descobertas.</span></figcaption></figure>
-          <figure class="showcase-card"><img src="assets/mesa-infantil-colorida.webp" width="1200" height="1200" loading="lazy" alt="Mesa infantil de madeira com quatro cadeiras coloridas"><figcaption><b>Ambientes infantis</b><span>Mobiliário para escolas, espaços recreativos e famílias.</span></figcaption></figure>
-          <figure class="showcase-card"><img src="assets/jogo-coordenacao-cores.webp" width="1200" height="1200" loading="lazy" alt="Jogo pedagógico colorido para coordenação motora"><figcaption><b>Desenvolvimento com propósito</b><span>Recursos pedagógicos para diferentes habilidades.</span></figcaption></figure>
-          <figure class="showcase-card"><img src="assets/boliche-flocki.webp" width="1069" height="1300" loading="lazy" alt="Jogo de boliche infantil colorido"><figcaption><b>Diversão educativa</b><span>Jogos que estimulam interação e movimento.</span></figcaption></figure>
+        <div class="showcase-track reveal" id="showcaseTrack" tabindex="0" aria-label="Categorias de produtos e projetos">
+          <figure class="showcase-card"><img src="assets/brincar-aviao-madeira.webp" width="1400" height="1400" loading="lazy" alt="Criança brincando com avião de madeira colorido"><figcaption><b>Brinquedos de madeira</b><span>Opções educativas para imaginar, montar e descobrir.</span><a class="card-link" href="#contato" data-interest="Brinquedos educativos de madeira">Solicitar opções →</a></figcaption></figure>
+          <figure class="showcase-card"><img src="assets/jogo-coordenacao-cores.webp" width="1200" height="1200" loading="lazy" alt="Jogo pedagógico colorido para coordenação motora"><figcaption><b>Jogos pedagógicos</b><span>Recursos para raciocínio, alfabetização e coordenação.</span><a class="card-link" href="#contato" data-interest="Jogos pedagógicos">Solicitar opções →</a></figcaption></figure>
+          <figure class="showcase-card"><img src="assets/mesa-infantil-colorida.webp" width="1200" height="1200" loading="lazy" alt="Mesa infantil de madeira com quatro cadeiras coloridas"><figcaption><b>Mobiliário infantil</b><span>Mesas, cadeiras e soluções para ambientes infantis.</span><a class="card-link" href="#contato" data-interest="Mobiliário infantil">Solicitar opções →</a></figcaption></figure>
+          <figure class="showcase-card"><img src="assets/boliche-flocki.webp" width="1069" height="1300" loading="lazy" alt="Jogo de boliche infantil colorido"><figcaption><b>Jogos recreativos</b><span>Produtos para interação, movimento e diversão em grupo.</span><a class="card-link" href="#contato" data-interest="Jogos recreativos">Solicitar opções →</a></figcaption></figure>
+          <figure class="showcase-card"><img src="assets/playground-aviao.webp" width="1400" height="1013" loading="lazy" alt="Playground temático em formato de avião com escorregadores"><figcaption><b>Playgrounds temáticos</b><span>Estruturas marcantes para áreas de lazer.</span><a class="card-link" href="#contato" data-interest="Playgrounds temáticos">Solicitar projeto →</a></figcaption></figure>
+          <figure class="showcase-card"><img src="assets/instalacao-playground.webp" width="1400" height="788" loading="lazy" alt="Instalação de playground em espaço coletivo arborizado"><figcaption><b>Projetos institucionais</b><span>Soluções para escolas, empresas e órgãos públicos.</span><a class="card-link" href="#contato" data-interest="Projetos institucionais de playground">Solicitar projeto →</a></figcaption></figure>
+          <figure class="showcase-card"><img src="assets/projeto-playground-concluido.webp" width="1400" height="788" loading="lazy" alt="Área recreativa concluída com playgrounds, balanços e gangorras"><figcaption><b>Áreas recreativas</b><span>Conjuntos para parques, condomínios e espaços coletivos.</span><a class="card-link" href="#contato" data-interest="Áreas recreativas completas">Solicitar projeto →</a></figcaption></figure>
         </div>
       </div>
     </section>
     <section class="solutions" id="solucoes">
       <div class="container solution-grid">
-        <div class="solution-feature reveal"><span class="eyebrow" style="color:var(--yellow)">Atendimento especializado</span><h2>Mais que produtos: soluções completas para seu espaço.</h2><p>Entendemos sua necessidade e ajudamos a escolher opções coerentes com faixa etária, área disponível, orçamento e objetivo pedagógico.</p><a class="btn btn-light" href="#contato" style="align-self:flex-start">Montar meu projeto →</a></div>
+        <div class="solution-feature reveal"><span class="eyebrow" style="color:var(--yellow)">Atendimento especializado</span><h2>Escolha com orientação e segurança.</h2><p>Consideramos a faixa etária, o espaço disponível, o orçamento e o objetivo de cada compra ou projeto.</p><a class="btn btn-light" href="#contato" style="align-self:flex-start">Falar com a equipe →</a></div>
         <div class="solution-list">
           <article class="solution-card reveal"><span>🏫</span><div><h3>Escolas e CMEIs</h3><p>Recursos pedagógicos e ambientes que apoiam o aprendizado.</p></div></article>
           <article class="solution-card reveal"><span>🩺</span><div><h3>Clínicas</h3><p>Materiais para estímulos cognitivos, motores e sensoriais.</p></div></article>
@@ -275,7 +236,6 @@
     const navigation=document.querySelector('#navigation');
     menuButton.addEventListener('click',()=>{const open=navigation.classList.toggle('open');menuButton.setAttribute('aria-expanded',String(open));menuButton.textContent=open?'×':'☰';document.body.classList.toggle('menu-open',open)});
     navigation.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{navigation.classList.remove('open');document.body.classList.remove('menu-open');menuButton.setAttribute('aria-expanded','false');menuButton.textContent='☰'}));
-    document.querySelectorAll('.filter').forEach(button=>button.addEventListener('click',()=>{document.querySelectorAll('.filter').forEach(b=>b.classList.remove('active'));button.classList.add('active');const filter=button.dataset.filter;document.querySelectorAll('.category-card').forEach(card=>{card.hidden=filter!=='todos'&&card.dataset.category!==filter})}));
     document.querySelectorAll('[data-interest]').forEach(link=>link.addEventListener('click',()=>{const interest=link.dataset.interest;const message=`Olá! Tenho interesse em ${interest} e gostaria de receber mais informações.`;document.querySelector('#quoteButton').href=`https://wa.me/5562993386654?text=${encodeURIComponent(message)}`}));
     document.querySelectorAll('.faq-question').forEach(button=>button.addEventListener('click',()=>{const item=button.closest('.faq-item');const open=item.classList.toggle('open');button.setAttribute('aria-expanded',String(open))}));
     const showcaseTrack=document.querySelector('#showcaseTrack');document.querySelectorAll('[data-showcase-direction]').forEach(button=>button.addEventListener('click',()=>showcaseTrack.scrollBy({left:Number(button.dataset.showcaseDirection)*showcaseTrack.clientWidth*.78,behavior:'smooth'})));
